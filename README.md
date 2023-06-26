@@ -18,6 +18,7 @@ vAstrayController:Start()
 ## Creation
 Refer to figure 1.2 to figure out how to create prompts
 ```lua
+-- Figure 1.2
 local arguments = {
   Parent : BasePart = script.Parent,
   HoldTime : number = 3, -- will fill in automatically; also, set to 0 in order for it to be insta-activated
@@ -31,6 +32,7 @@ local newPrompt = vAstray.new(arguments)
 ## Handling
 Refer to figure 1.3 to figure out how to handle prompts
 ```lua
+-- Figure 1.3
 local uses = 0
 newPrompt.Interacted:Connect(function(player: Player?)
   uses += 1
@@ -42,4 +44,9 @@ newPrompt.Interacted:Connect(function(player: Player?)
     newPrompt:Destroy()
   end
 end)
+```
+## ...
+It should be noted that bugs have a high possibility of occuring as of now, since vAstray is still in its early stages and it has been created very recently without much bug testing.
+
+`A.v.0.1.1a
 ```
