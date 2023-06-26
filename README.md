@@ -48,5 +48,5 @@ end)
 ## ...
 It should be noted that bugs have a high possibility of occuring as of now, since vAstray is still in its early stages and it has been created very recently without much bug testing.
 
-`A.v.0.1.1a
+`A.v.0.1.1a`
 ```
