@@ -14,6 +14,7 @@ vAstray.Init()
 -- On the client
 local vAstrayController = require(game.ReplicatedStorage.Services.vAstray.Controller)
 vAstrayController:Start()
+vAstrayController.Quit() -- fire when you want to quit controlling
 ```
 ## Creation
 Refer to figure 1.2 to figure out how to create prompts
@@ -45,8 +46,21 @@ newPrompt.Interacted:Connect(function(player: Player?)
   end
 end)
 ```
+## Mobile Compatibility
+Refer to figure 1.4 to figure out how to add mobile compatibility
+```
+-- Figure 1.4
+-- In order for this to work, you must download the fluidMobile module [listed under this repo], and place it in starterPlayerScripts
+vAstrayController.AllowMultiplat()
+```
 ## ...
 It should be noted that bugs have a high possibility of occuring as of now, since vAstray is still in its early stages and it has been created very recently without much bug testing.
 Also, as of now, descriptions/titles are not a feature of the prompts; however, I do plan on adding this sometime later.
-`A.v.0.1.1a`
+
+`A.v.0.1.4`
+Change Log:
++ Mobile Compatibility
++ Text & Description (properties of promptArgumentData)
+- Fixed delay issues
+- Fixed performance issues
 ```
