@@ -54,4 +54,3 @@ vAstrayController.AllowMultiplat()
 ## ...
 It should be noted that bugs have a high possibility of occuring as of now, since vAstray is still in its early stages and it has been created very recently without much bug testing.
 Also, as of now, descriptions/titles are not a feature of the prompts; however, I do plan on adding this sometime later.
-```
