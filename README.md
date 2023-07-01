@@ -1,6 +1,4 @@
 # vAstray
-vAstray—proximity prompts done right. 
-
 vAstray is a `Service` used to create and handle proximity prompts. The process is simple and offers a more dynamic (and declarative) approach to prompts when compared to the standard ProximityPrompts instance.
 
 ## Initialization
@@ -56,11 +54,4 @@ vAstrayController.AllowMultiplat()
 ## ...
 It should be noted that bugs have a high possibility of occuring as of now, since vAstray is still in its early stages and it has been created very recently without much bug testing.
 Also, as of now, descriptions/titles are not a feature of the prompts; however, I do plan on adding this sometime later.
-
-`A.v.0.1.4`
-Change Log:
-+ Mobile Compatibility
-+ Text & Description (properties of promptArgumentData)
-- Fixed delay issues
-- Fixed performance issues
 ```
