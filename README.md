@@ -48,7 +48,8 @@ end)
 Refer to figure 1.4 to figure out how to add mobile compatibility
 ```
 -- Figure 1.4
--- In order for this to work, you must download the fluidMobile module [listed under this repo], and place it in starterPlayerScripts
+-- In order for this to work, you must download the fluidMobile module [listed under my other repos], and place it in starterPlayerScripts
+-- get fluidMobile here: https://raw.githubusercontent.com/Reflinders/fluidMobile/main/fluidMobile.lua
 vAstrayController.AllowMultiplat()
 ```
 ## ...
