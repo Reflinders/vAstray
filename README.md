@@ -139,6 +139,14 @@ end
 return UI
 ```
 
+To set the default component, you must call `vAstray.SetComponent`:
+```lua
+vAstray.SetComponent(ModuleScript)
+vAstray.SetComponent(nil)
+-- Setting the component to nil will result in the default component reverting back to the standard one
+-- Do note that this will only work on prompts created AFTER setting the component; the component of pre-existing prompts cannot be changed!
+```
+
 ## Listeners
 On the client, it is possible to listen for the events `Shown` and `Hidden` of certain prompts. Refer to the following figure:
 
