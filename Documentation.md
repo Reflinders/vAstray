@@ -3,7 +3,7 @@ vAstray is a `Service` used to create and handle proximity prompts. The process 
 
 Nevertheless, in order for you to understand how vAstray functions, it is necessary you read the documentation. Additionally, please note that this documentation is only for versions that proceed the September Rewrite.
 
-# Starting
+## Starting
 
 Before starting, you want to retrieve all the packages necessary: Waves, Charcoal, Worktable, Vespera, and Fusion. You can find all of these (except Fusion, you can find it elsewhere) on my Github profile (@Reflinders).
 
@@ -21,7 +21,7 @@ local Client = require(vAstrayModule.Client)
 Client.Start()
 ```
 
-# Prompts
+## Prompts
 
 Prompts are created through `vAstray.Create`; alternatively, you could use `vAstray.new`. One argument is required and it is a table; and the only key-value required is "Parent." Parent must either be a BasePart, Model (with a PrimaryPart), a mixed table (with key "PrimaryPart"), or an Attachment. Any flaws within the arguments given will be recognized by vAstray and will throw an error, so be cautious. 
 
@@ -48,7 +48,7 @@ local newPrompt = vAstray.Create {
 }
 ```
 
-## Events
+### Events
 
 Prompts have 1--3 events, depending on what end they're located in. Server prompts have 3: "Interacted," "Held," and "Released." Client prompts only have the event "Interacted."
 
@@ -61,7 +61,7 @@ newPrompt.Interacted:Connect(function()
 end)
 ```
 
-## Guidelines
+### Guidelines
 
 Prompts have a few guidelines that are necessary for proper functioning. One of these guidelines, for example, is not changing read-only properties. Attempting to change these properties will result in an error or the nonfunctioning of a prompt. These properties are `Keybind`, `Global`, `Parent`, `Association`, `Behavior`, `Component`, "Enabled" of `Access`, and "Reprise" of `Client`. 
 
@@ -79,7 +79,7 @@ To change the activity (`Enabled`) of a prompt, follow this procedure:
 newPrompt:Active(boolean)
 ```
 
-## Blacklisting
+### Blacklisting
 To blacklist a player, do:
 ```lua
 newPrompt:Blacklist(Player, true)
@@ -90,7 +90,7 @@ To check if a player is blacklisted, do:
 newPrompt:IsBlacklist(Player)
 ```
 
-## Int-Component
+### Int-Component
 A.K.A, Interface Component
 
 The Interface Component is the handler for the UI of a Prompt. When giving the component to vAstray, it should NEVER be a table or any other value than a ModuleScript. Within the module, there should exist the properties/functions/methods `new` (function), `set` (method), `IsA` (function), `setVisible` (method), `setTitleColor` (method), `setProgress` (method), and `activated` (method). When a prompt associated with the given component is created, the function `new` of the module will be fired with the arguments Parent (Instance), Adornee (Instance), Keybind (Enum.KeyCode), and Visual (Table: {Title: string, Description: string}).
@@ -139,7 +139,7 @@ end
 return UI
 ```
 
-# Listeners
+## Listeners
 On the client, it is possible to listen for the events `Shown` and `Hidden` of certain prompts. Refer to the following figure:
 
 ```lua
@@ -158,10 +158,12 @@ Client.Listen(ParentOfPromptOrTheRef, "Hidden", function()
 end)
 ```
 
-# Mobile-Compatibility
+## Mobile-Compatibility
 vAstray now has automatic mobile compatibility. All that is necessary to ensure compatibility is the "fluidMobile" module, on my (@Reflinders) profile.
 
-# Why did vAstray get rewritten?
+# ...
+
+## Why did vAstray get rewritten?
 (September)
 
 The previous version of vAstray had a multitude of typechecking errors, performance issues, and lack of attention to network problems.
@@ -169,7 +171,7 @@ Now, vAstray works off of the networking service "Vespera," and overall, the vAs
 
 Do note that this version of vAstray is very experimental. It is newly released, and time is required to catch evident bugs.
 
-# ...
+## -
 
 Documentation written on 9/9/23
 
