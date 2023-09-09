@@ -171,7 +171,7 @@ vAstray now has automatic mobile compatibility. All that is necessary to ensure 
 
 # ...
 
-## Why did vAstray get rewritten?
+## Regarding The Rewrite
 (September)
 
 The previous version of vAstray had a multitude of typechecking errors, performance issues, and lack of attention to network problems.
