@@ -148,7 +148,7 @@ vAstray.SetComponent(nil)
 ```
 
 ## Listeners
-On the client, it is possible to listen for the events `Shown` and `Hidden` of certain prompts. Refer to the following figure:
+On the client, it is possible to listen for the events `Shown`, `Hidden`, `Declared`, and `Tweaked` of certain prompts. Refer to the following figure:
 
 ```lua
 local Client = require(vAstrayModule.Client)
@@ -156,14 +156,26 @@ local Client = require(vAstrayModule.Client)
 --[[
   Note that the first argument can either be the parent of the prompt or the ref.
   Generally, it is much easier to create a listener from the parent rather than the ref, because there is no direct way of retrieving the ref on the client.
-  Also, note that this function yields, as if the prompt is not found on the client, it will wait until it exists on the client's end.
+  Also, note that this function yields (Unless the event is "Declared"), as in, if the prompt is not found on the client, it will wait until it exists on the client's end.
 ]]
-Client.Listen(ParentOfPromptOrTheRef, "Shown", function()
-  print("It was shown")
+
+-- Will return a function that when called, will disconnect the listener
+
+Client.Listen(ParentOfPrompt, "Declared", function()
+	-- Will fire the event once the prompt exists on the client's index
+
+	local Disconnect1 = Client.Listen(ParentOfPrompt, "Shown", function()
+ 	 print("It was shown")
+	end)
+
+	local Disconnect2 = Client.Listen(ParentOfPrompt, "Hidden", function()
+ 	 print("It was hidden")
+	end)
+
+	task.wait(5)
+	Disconnect1() -- Listener will no longer listen
 end)
-Client.Listen(ParentOfPromptOrTheRef, "Hidden", function()
-  print("It was hidden")
-end)
+
 ```
 
 ## Mobile-Compatibility
@@ -181,5 +193,5 @@ Do note that this version of vAstray is very experimental. It is newly released,
 
 ## -
 
-Documentation written on 9/9/23
+Documentation written on 9/9/23; Last updated 9/17/23
 
