@@ -1,7 +1,7 @@
 # vAstray
 vAstray is a `Service` used to create and handle proximity prompts. The process is simple and offers a more dynamic (and declarative) approach to prompts when compared to the standard ProximityPrompts instance. Also, vAstray supports flexibility; for instance, it is possible for you to create your own UI component, which you can find the guide to in this documentation.
 
-Nevertheless, in order for you to understand how vAstray functions, it is necessary you read the documentation. Additionally, please note that this documentation is only for versions that proceed the September Rewrite.
+Nevertheless, in order for you to understand how vAstray functions, it is necessary you read the documentation. Please note that this documentation is only for versions that proceed the September Rewrite.
 
 ## Starting
 
